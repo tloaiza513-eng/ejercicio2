@@ -1,0 +1,224 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rosa: #ff4b5c;
+  --oscuro: #333333;
+  --texto: #444444;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  color: var(--texto);
+  background: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.hero {
+  position: relative;
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('assets/images/images/hero.jpg.jpg') center / cover no-repeat;
+}
+
+.hero__title {
+  display: flex;
+  gap: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 110px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.hero__title .light {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.hero__title .strong {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+/* ========== BOTON ========== */
+.btn {
+  display: inline-block;
+  padding: 10px 42px;
+  background: var(--rosa);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(255, 75, 92, 0.35);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+  background: #e83a4b;
+  transform: translateY(-2px);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 130px;
+  padding: 130px 8%;
+}
+
+.feature--reverse {
+  padding-top: 40px;
+}
+
+.feature__text {
+  max-width: 470px;
+}
+
+.feature__text h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--oscuro);
+  margin-bottom: 22px;
+}
+
+.feature__text h2 .accent {
+  display: block;
+  color: var(--rosa);
+}
+
+.feature__text p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 440px;
+}
+
+.feature__img img {
+  width: 330px;
+  height: 440px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 420px;
+  padding: 60px 12%;
+  background: url('assets/images/images/guitarra.jpg.png') center / cover no-repeat;
+  color: #ffffff;
+}
+
+.banner__text {
+  max-width: 420px;
+}
+
+.banner__text h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.banner__text p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+
+.footer {
+  background: linear-gradient(180deg, #ff4b5c, #ff5a6e);
+  color: #ffffff;
+  padding: 70px 8% 30px;
+}
+
+.footer__cols {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  margin-bottom: 70px;
+}
+
+.footer__col h4 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+
+.footer__col ul {
+  list-style: none;
+}
+
+.footer__col li {
+  font-size: 12px;
+  margin-bottom: 14px;
+  opacity: 0.95;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    height: 360px;
+  }
+
+  .hero__title {
+    font-size: 48px;
+    gap: 10px;
+  }
+
+  .feature,
+  .feature--reverse {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 8%;
+  }
+
+  .feature--reverse {
+    flex-direction: column-reverse;
+  }
+
+  .feature__img img {
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .feature__text h2,
+  .banner__text h2 {
+    font-size: 30px;
+  }
+
+  .banner {
+    justify-content: center;
+  }
+
+  .footer__cols {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
